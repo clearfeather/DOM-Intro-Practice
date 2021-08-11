@@ -1,16 +1,23 @@
+// Select button and H2
 const button = document.querySelector('button');
-const h1 = document.querySelector('h1');
+const h2 = document.querySelector('h2');
 
+// When button clicked
 button.addEventListener('click', function () {
+    // Assign new vairable to function
     const newColor = makeRandColor();
+    // Select document body (background color), assign to newColor var
     document.body.style.backgroundColor = newColor;
-    h1.innerText = newColor;
+    // Assign H2 text to newColor var (to show variables)
+    h2.innerText = newColor;
 })
 
+// Random color function
 const makeRandColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
+    // Each R G B variables set to random number between 0 and 255
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    // Return the 3 random numbers for R G B
     return `rgb(${r}, ${g}, ${b})`;
 }
-
