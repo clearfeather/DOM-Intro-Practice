@@ -1,7 +1,7 @@
 // Select the form, assign to var
 const tweetForm = document.querySelector('#tweetForm');
 // Select the ul for the tweets to be added
-const tweetContainer = document.querySelector('#tweets')
+const tweetContainer = document.querySelector('#tweets');
 
 // Start the event listener with the e parameter for the preventDefault and wait for submit event
 tweetForm.addEventListener('submit', function(e) {
