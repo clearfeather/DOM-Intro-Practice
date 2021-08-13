@@ -1,3 +1,9 @@
+// const lis = document.querySelector('li');
+// for (let li of lis) {
+//     li.addEventListener('click', function () {
+//         li.remove();
+//     })
+// }
 
 const tweetForm = document.querySelector('#tweetForm');
 const tweetsContainer = document.querySelector('#tweets');
@@ -19,7 +25,11 @@ const addTweet = (username, tweet) => {
     tweetsContainer.append(newTweet);
 }
 
+// Event Delegation
 tweetsContainer.addEventListener('click', function (e) {
+    // // Remove specific element only
+    // e.target.remove();
+    
+    // If nodeName is LI then remove
     e.target.nodeName === 'LI' && e.target.remove();
 })
-
